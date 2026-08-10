@@ -1,0 +1,109 @@
+<mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Users Layer -->
+    <mxCell id="u1" value="Admin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="120" y="30" width="120" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="u2" value="Procurement Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="410" y="30" width="160" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="u3" value="Supplier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="700" y="30" width="120" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Presentation Layer -->
+    <mxCell id="p1" value="Presentation Layer&#10;React.js + HTML/CSS/JS&#10;(Login, Dashboard, Supplier Mgmt,&#10;PO Mgmt, Evaluation Forms, Reports)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="240" y="130" width="480" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- API Gateway / Auth - widened to match full row below -->
+    <mxCell id="a1" value="REST API Layer (FastAPI)&#10;Authentication &amp; Role-Based Access Control (JWT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="60" y="260" width="890" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Business Logic Modules -->
+    <mxCell id="b1" value="User Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="60" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="b2" value="Supplier Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="245" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="b3" value="Purchase Order &amp;&#10;Delivery Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="430" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="b4" value="Evaluation &amp; Rating&#10;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="615" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="b5" value="Feedback &amp;&#10;Dashboard/Reports" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="800" y="400" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Data Access Layer -->
+    <mxCell id="d1" value="Data Access Layer&#10;SQLAlchemy ORM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="305" y="510" width="360" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Database -->
+    <mxCell id="db1" value="MySQL Database&#10;(Users, Suppliers, PurchaseOrders,&#10;Deliveries, Evaluations, Ratings,&#10;Feedback)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;boundedLbl=1;" vertex="1" parent="1">
+      <mxGeometry x="385" y="620" width="220" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Edges: Users -> Presentation -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.15;entryY=0;" edge="1" parent="1" source="u1" target="p1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="u2" target="p1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.85;entryY=0;" edge="1" parent="1" source="u3" target="p1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Presentation -> API -->
+    <mxCell id="e4" value="HTTPS / REST (JSON)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="p1" target="a1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- API -> Business Logic modules: exitX matches each target's center x so lines drop straight down, no crossing -->
+    <mxCell id="e5" edge="1" parent="1" source="a1" target="b1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.152;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e6" edge="1" parent="1" source="a1" target="b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.360;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e7" edge="1" parent="1" source="a1" target="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.562;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e8" edge="1" parent="1" source="a1" target="b4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.775;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e9" edge="1" parent="1" source="a1" target="b5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.982;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Business Logic -> Data Access Layer -->
+    <mxCell id="e10" edge="1" parent="1" source="b1" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.1;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e11" edge="1" parent="1" source="b2" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e12" edge="1" parent="1" source="b3" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e13" edge="1" parent="1" source="b4" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.7;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e14" edge="1" parent="1" source="b5" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.9;entryY=0;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Data Access -> Database -->
+    <mxCell id="e15" value="SQL Queries" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="d1" target="db1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
