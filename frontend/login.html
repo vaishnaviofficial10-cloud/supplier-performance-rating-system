@@ -1,0 +1,280 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supplier Performance Rating System | Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- Left Branding Section -->
+        <section class="brand-section">
+
+            <div class="brand-content">
+
+                <div class="brand-logo">
+                    <span>SP</span>
+                </div>
+
+                <h1>Supplier Performance<br>Rating System</h1>
+
+                <p>
+                    A smart platform to monitor, evaluate and manage
+                    supplier performance efficiently.
+                </p>
+
+                <div class="brand-line"></div>
+
+                <span class="brand-caption">
+                    Supplier Performance Management
+                </span>
+
+            </div>
+
+            <div class="brand-footer">
+                © 2026 Supplier Performance Rating System
+            </div>
+
+        </section>
+
+
+        <!-- Login Section -->
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <!-- Mobile Logo -->
+                <div class="mobile-brand">
+                    <div class="mobile-logo">
+                        SP
+                    </div>
+
+                    <span>
+                        Supplier Performance
+                    </span>
+                </div>
+
+
+                <!-- Header -->
+                <div class="login-header">
+
+                    <span class="welcome-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>Sign in to continue</h2>
+
+                    <p>
+                        Enter your account details to access your dashboard.
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form id="loginForm" novalidate>
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <svg class="input-icon"
+                                 viewBox="0 0 24 24"
+                                 aria-hidden="true">
+
+                                <path d="M4 6H20V18H4V6Z"></path>
+                                <path d="M4 7L12 13L20 7"></path>
+
+                            </svg>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                        <span class="error-message" id="emailError"></span>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <svg class="input-icon"
+                                 viewBox="0 0 24 24"
+                                 aria-hidden="true">
+
+                                <rect x="5"
+                                      y="10"
+                                      width="14"
+                                      height="10"
+                                      rx="2">
+                                </rect>
+
+                                <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10">
+                                </path>
+
+                            </svg>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <span class="error-message" id="passwordError"></span>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="form-options">
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>Remember me</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Message -->
+                    <div
+                        class="form-message"
+                        id="formMessage"
+                        role="alert">
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+
+                        <span id="buttonText">
+                            Sign In
+                        </span>
+
+                        <span
+                            class="loader"
+                            id="loader">
+                        </span>
+
+                        <svg
+                            class="button-arrow"
+                            id="buttonArrow"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 12H19"></path>
+                            <path d="M13 6L19 12L13 18"></path>
+                        </svg>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Register -->
+                <div class="register-section">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a href="#" id="createAccount">
+                        Create account
+                    </a>
+
+                </div>
+
+
+                <!-- Security -->
+                <div class="security-note">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M12 3L20 6V11C20 16 16.6 20 12 21C7.4 20 4 16 4 11V6L12 3Z">
+                        </path>
+
+                        <path d="M9 12L11 14L15 10">
+                        </path>
+                    </svg>
+
+                    <span>
+                        Your information is securely protected.
+                    </span>
+
+                </div>
+
+
+                <p class="copyright">
+                    © 2026 Supplier Performance Rating System
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>
+```
